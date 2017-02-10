@@ -8,8 +8,19 @@
     		
  }
 
+ .col-xs-4{
+
+   
+    	}
+
 .col-xs-8{
 
+}
+
+#mydinner{
+
+	height: 500px;
+	background-color: gray;
 }
 
 
