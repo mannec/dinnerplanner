@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOMELETTE</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link href="css/custom.css" rel = "stylesheet" type="text/css">
+
+
+
+  </head>
+  <body>
+  	<div class="container">
+  		<div id ="view2">
+  		
+  		  <div class ="row" id="headerrow">
+  			   <div class ="col-md-2 header" id="logga"><h1>LOGGA</h1> </div>
+  			   <div class ="col-md-10 header" id="tagline"><h3>From the best chefs in the world directly to your kitchen</h3></div>
+
+  		  </div>
+
+  		<div class ="row" id="bigrow">
+  			<div class ="col-xs-3" id="mydinner">
+
+  				<h3>My dinner</h3>
+  				<div class="form-group">
+    				<label for="sel1">People:</label>
+    					<select class="form-control" id="sel1">
+      					<option>1</option>
+      					<option>2</option>
+      					<option>3</option>
+      					<option>4</option>
+    					</select>
+    					<h3>Dishes</h3>
+    					<h3>Number Of People:</h3><h3 id= "getNumberOfGuests">Antal gäster</h3>
+    					<hr>
+    					<h3>Cost: SEK</h3>
+    					<div id="confirmbtn"> <h4> Confirm Dinner </h4></div>
+        </div>
+      </div>
+
+
+        <div class ="col-xs-9" id ="searchrow">
+          <h3>Select Dish</h3>
+          <hr>
+          
+          <div class="col-xs-5">
+            <input type ="form" id="searchbox"> Search for a dish  </input>
+          </div>
+          
+          <div class ="col-xs-4">
+          <div class="form-group">
+              <select class="form-control" id="dishes">
+                <option>Main</option>
+                <option>Pre-course</option>
+                <option>Deserts</option>
+                <option>Sides</option>
+              </select>
+          </div>
+        </div>
+      
+
+
+
+        <div class ="col-xs-9" id="showfood">
+
+          <div class ="col-xs-3">  IMAGE 1  </div>
+            
+          <div class ="col-xs-3"> IMAGE 2</div>
+           
+          <div class ="col-xs-3"> BILD 3 haha</div>
+
+
+
+        </div>
+
+
+
+
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+
+  </div>
+	
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/View1.js"></script>
+	<script src="js/view/View2.js"></script>
+  </body>
+</html>
