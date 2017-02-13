@@ -22,44 +22,112 @@ var DinnerModel = function() {
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
 
-
-		$("#numberOfGuests").val(function(i, origText){
-        	return "(index: " + i + ")"; 
-    	});
+		return numberofguests;
 	
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		
+		//do they mean return dish from selectedDishes?
+		for (dish in selectedDishes){
 
-		return selectedDishes;
+			if(dish.type == type)
+				return dish;
+		}
+
+		
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		//TODO Lab 2
+		
+
+		// Do they mean return selected Dishes or all dishes?
+
+		return dishes;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 2
+		
+
+		//Do they mean all ingridients from selectedDishes?
+		var allIngredients = new Array();
+
+		  for(dish in selectedDishes){
+			 
+				allIngredients.push(dish.ingredients);
+			
+			}
+
+		return allIngredients;
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		//TODO Lab 2
+
+		var ingredientsPrice = 0;
+		
+		for(dish in selectedDishes){
+
+			for (dish.ingredients){
+
+				ingredientsPrice = ingredientsPrice + dish.ingredients.price;
+
+			}
+
+
+		return ingredientsPrice * getNumberOfGuests;
+
+
+
+		}
+
+
+
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//TODO Lab 2 
+		
+
+		var newdish = this.getDish(id);
+
+		for (dish in selectedDishes) {
+
+			if(newdish.type == dish.type){
+
+			
+				var removeItem = dish;
+
+				selectedDishes = jQuery.grep(selectedDishes, function(value) {
+  					return value != removeItem;
+					
+					});
+
+
+				selectedDishes.push(newdish);
+
+			}
+
+
+
+		}
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		//TODO Lab 2
+		
+				var removeItem = getDish(id);
+
+				selectedDishes = jQuery.grep(selectedDishes, function(value) {
+  					return value != removeItem;
+
+  				}
+
+
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
