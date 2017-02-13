@@ -27,7 +27,7 @@ var ExampleView = function (container, DinnerModel) {
 
 		// kör setnumberofguests
 		// populera fältet med den datan
-		this.model.getNumberOfGuests();
+		this.numberOfGuests.html("Hello");
 	
 	});
 
