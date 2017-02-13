@@ -16,6 +16,8 @@ var View1 = function (container, DinnerModel) {
 
 	this.logga.html("hahahahahahah");
 
+	
+
 
     
 	this.startbtn.click(function(){

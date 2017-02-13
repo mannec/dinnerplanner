@@ -22,12 +22,14 @@ var View2 = function (container, DinnerModel) {
 	
 
 	this.header.click(function(){
-    	alert("Value: " + this.numberOfGuests.val());
+    	this.header.hide();
 	});
 
 
 
-
+	$("#btn1").click(function(){
+    	alert("Value: " + $("#test").val());
+	});
 
 
 	
