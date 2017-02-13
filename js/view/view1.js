@@ -14,8 +14,6 @@ var View1 = function (container, DinnerModel) {
 
 	this.model = DinnerModel;
 
-	this.logga.html("hahahahahahah");
-
 	
 
 
